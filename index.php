@@ -43,6 +43,28 @@ function groupCharacters($string)
     <title>Number To LCD</title>
     <link rel="stylesheet" href="styling.css" />
     <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            color: black;
+            font-family: monospace;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: black;
+            background-color: cornflowerblue;
+            color: #000;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
         .group {
             display: inline-block;
             margin: 2px;
@@ -51,7 +73,7 @@ function groupCharacters($string)
         }
 
         .lcd-numbers {
-            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -62,7 +84,7 @@ function groupCharacters($string)
     <form method="post" autocomplete="off">
         <input type="text" name="number" id="inputNumber" placeholder="Enter a number" maxlength="15"
             oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
-        <button type="submit">Render</button>
+        <button type="submit">Submit</button>
     </form>
 
     <div class="lcd-numbers">
