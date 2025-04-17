@@ -11,8 +11,10 @@ require_once __DIR__ . '../src/numbers/Seven.php';
 require_once __DIR__ . '../src/numbers/Eight.php';
 require_once __DIR__ . '../src/numbers/Nine.php';
 
-$parser = new LcdParser(false); // false = small type, size is ignored
-$output = $parser->numberBuilder(1);
 
-echo "LCD Output for 1:\n";
-echo $output;
+$parser = new LcdParser(false); 
+$parser->numberBuilder(123); 
+
+echo $parser->getFirstLine() . "\n";
+echo $parser->getSecondLine() . "\n";
+echo $parser->getThirdLine() . "\n";

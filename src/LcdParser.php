@@ -29,7 +29,7 @@ class LcdParser
         $this->additionalLineOne = "";
         $this->additionalLineTwo = "";
         $this->isLargeType = $isLargeType;
-        $this->largeSizeArray = array("", "", "", "", "");
+        $this->largeSizeArray = array_fill(0, 5, "");
         $this->size = $size;
     }
     public function numberBuilder($inputNumber)
